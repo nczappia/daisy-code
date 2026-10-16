@@ -132,6 +132,7 @@ int main(void)
             pod.seed.PrintLine("waveform %d", waveform);
             last = waveform;
         }
-        System::Delay(10);
+        // LEDs use software PWM, which expects UpdateLeds() at ~1 kHz
+        System::Delay(1);
     }
 }

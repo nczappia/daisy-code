@@ -57,7 +57,8 @@ Change these in `main()` (`env.Set...`).
 
 ### Main loop (`main`)
 Sets up the hardware, oscillator, filter, envelope, ADC and audio. Then every
-10 ms it updates LEDs 1 and 2 and prints a log line when the waveform or mode
+1 ms it updates LEDs 1 and 2 (their software PWM needs ~1 kHz updates to
+look steady) and prints a log line when the waveform or mode
 changes.
 
 ## Fix applied: loud, muddy triangle, saw and square
